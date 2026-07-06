@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Interactive Chemistry Simulation</title>
+
+<meta name="theme-color" content="#edf4ff">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="style.css">
+
+<script defer src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.min.js"></script>
+
+<script defer src="web.js"></script>
+
+</head>
+
+<body>
+
+<div id="app">
+
+<header class="topbar glass">
+
+<div class="logo">
+
+<i class="fa-solid fa-atom"></i>
+
+<span>Interactive Chemistry Simulation</span>
+
+</div>
+
+<div class="simulation-name">
+
+Simulation Framework
+
+</div>
+
+</header>
+
+<div class="workspace">
+
+<aside class="toolbar glass">
+
+<button id="playBtn" title="Play">
+
+<i class="fa-solid fa-play"></i>
+
+<span>Play</span>
+
+</button>
+
+<button id="pauseBtn" title="Pause">
+
+<i class="fa-solid fa-pause"></i>
+
+<span>Pause</span>
+
+</button>
+
+<button id="resetBtn" title="Reset">
+
+<i class="fa-solid fa-stop"></i>
+
+<span>Reset</span>
+
+</button>
+
+<button id="stepBtn" title="Step">
+
+<i class="fa-solid fa-forward-step"></i>
+
+<span>Step</span>
+
+</button>
+
+<button id="fullscreenBtn" title="Fullscreen">
+
+<i class="fa-solid fa-expand"></i>
+
+<span>Fullscreen</span>
+
+</button>
+
+<button id="helpBtn" title="Help">
+
+<i class="fa-solid fa-circle-question"></i>
+
+<span>Help</span>
+
+</button>
+
+</aside>
+
+<main class="canvas-area">
+
+<div id="canvas-container"></div>
+
+<div id="progressPanel" class="glass">
+
+<div class="progress-header">
+
+<span>Animation Progress</span>
+
+<span id="progressValue">0%</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div id="progressFill"></div>
+
+</div>
+
+</div>
+
+</main>
+
+<aside class="info-panel glass">
+
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-flask"></i>
+
+Tên mô phỏng
+
+</h2>
+
+<p id="simName">
+
+Hydrogen Covalent Bond
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-circle-dot"></i>
+
+Electron lớp ngoài
+
+</h2>
+
+<p id="valenceInfo">
+
+Đang khởi tạo...
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-atom"></i>
+
+Thông tin nguyên tử
+
+</h2>
+
+<div id="atomInfo">
+
+Đang khởi tạo...
+
+</div>
+
+</div>
+
+<div class="card explanation">
+
+<h2>
+
+<i class="fa-solid fa-book-open"></i>
+
+Giải thích
+
+</h2>
+
+<div id="explanation">
+
+Framework sẵn sàng.
+
+</div>
+
+</div>
+
+</aside>
+
+</div>
+
+<footer class="footer glass">
+
+© IMPHUONGANH
+
+</footer>
+
+</div>
+
+<div id="tooltip"></div>
+
+<div id="modal" class="hidden">
+
+<div class="modal-content glass">
+
+<h2>Hướng dẫn</h2>
+
+<p>
+
+Framework Interactive Chemistry Simulation
+
+</p>
+
+<button id="closeModal">
+
+Đóng
+
+</button>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
